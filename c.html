@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video capture</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+  <video id="video" autoplay style="display: none;"></video>
+  <canvas id="thecanvas" width="640" height="480" style="display: none;"></canvas>
+  
+  <div class="videos">
+    <div class="video" v-for="i in images">
+      <img v-bind:src="i.img" v-bind:alt="i.name">
+      <span>{{ i.name }}</span>
+    </div>
+  </div>
+
+  <script src="https://100ants.github.io/100ants/cam.js"></script>
+</body>
+</html>
